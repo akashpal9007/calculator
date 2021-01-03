@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calci</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            background-color: #F95700FF;
+        }
+        .container{
+            align-items: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #input{
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            width: 268px;
+            height: 40px;
+            text-align: end;
+            font-size: xx-large;
+        }
+        .btn{
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin: 3px;
+            width: 60px;
+            height: 50px;
+        }
+        #btn0{
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin: 3px;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form name="form">
+            <input type="text" name="result" id="input">
+            <div>
+            <input type="button" value="A_C_" onclick="form.result.value = ' '" class="btn">
+            <input type="button" value="C" onclick="form.result.value =- ''" class="btn">
+            <input type="button" value="." onclick="form.result.value += '.'" class="btn">
+            <input type="button" value="/" onclick="form.result.value += '/'" class="btn">
+        </div>
+            <div>
+            <input type="button" value="9" onclick="form.result.value += '9'" class="btn">
+            <input type="button" value="8" onclick="form.result.value += '8'" class="btn">
+            <input type="button" value="7" onclick="form.result.value += '7'" class="btn">
+            <input type="button" value="*" onclick="form.result.value += '*'" class="btn">
+        </div>
+            <div>
+            <input type="button" value="6" onclick="form.result.value += '6'" class="btn">
+            <input type="button" value="5" onclick="form.result.value += '5'" class="btn">
+            <input type="button" value="4" onclick="form.result.value += '4'" class="btn">
+            <input type="button" value="-" onclick="form.result.value += '-'" class="btn">
+        </div>
+            <div>
+            <input type="button" value="3" onclick="form.result.value += '3'" class="btn">
+            <input type="button" value="2" onclick="form.result.value += '2'" class="btn">
+            <input type="button" value="1" onclick="form.result.value += '1'" class="btn">
+            <input type="button" value="+" onclick="form.result.value += '+'" class="btn">
+        </div>
+        <div>
+            <input type="button" value="0" onclick="form.result.value += '0'" id="btn0">
+            <input type="button" value="=" onclick="form.result.value = eval(form.result.value)" class="btn">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
