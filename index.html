@@ -8,7 +8,8 @@
           *{
             margin: 0;
             padding: 0;
-            background-color: #F95700FF;
+            background-image: linear-gradient(150deg,rgb(209, 22, 53),blue);
+            font-family: sans-serif;
         }
         .container{
             align-items: center;
@@ -22,18 +23,29 @@
             border: 2px solid black;
             border-radius: 5px;
             border-radius: 5px;
-            width: 268px;
+            width: 270px;
             height: 40px;
             text-align: end;
             font-size: xx-large;
         }
         .btn{
+            background: rgba(46, 29, 29, 0.61);
             border: 2px solid black;
             border-radius: 5px;
             border-radius: 5px;
             font-weight: 700;
             margin: 3px;
             width: 60px;
+            height: 50px;
+        }
+        #btnC{
+            background: rgba(46, 29, 29, 0.61);
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin: 3px;
+            width: 132px;
             height: 50px;
         }
         #btn0{
@@ -45,6 +57,36 @@
             width: 200px;
             height: 50px;
         }
+        @media (max-width: 450px) {
+           .container{
+               height: 100vh;
+               justify-content: flex-end;
+               font-size: xx-large;
+           }
+           .btn{
+               height: 70px;
+               margin: 5px;
+               font-size: xx-large;
+           }
+           #input{
+            width: 285px;
+            height: 70px;
+            margin: 5px;
+            font-size: xx-large;
+           }
+           #btn0{
+            height: 70px;
+            margin: 6px;
+            width: 216px;
+            font-size: xx-large;
+           }
+           #btnC{
+            height: 70px;
+            width: 136px;
+            margin: 5px;
+            font-size: xx-large;
+           }
+        }
     </style>
 </head>
 <body>
@@ -52,8 +94,7 @@
         <form name="form">
             <input type="text" name="result" id="input">
             <div>
-            <input type="button" value="A_C_" onclick="form.result.value = ' '" class="btn">
-            <input type="button" value="C" onclick="form.result.value =- ''" class="btn">
+            <input type="button" value="A_C_" onclick="form.result.value = ' '" id="btnC">
             <input type="button" value="." onclick="form.result.value += '.'" class="btn">
             <input type="button" value="/" onclick="form.result.value += '/'" class="btn">
         </div>
